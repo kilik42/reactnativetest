@@ -46,12 +46,12 @@ export default class App extends Component<Props> {
 
         </View>
         <View style = {styles.half2} >
-              <View style = {styles.half21} >
+            <View style = {styles.half21, styles.half2x} >
                     <Text style={styles.text}> this is 2/1</Text>
 
               </View>
 
-              <View style = {styles.half22} >
+              <View style = {[styles.half22, styles.half2x]} >
 
                   <Text> this is 2/2</Text>
               </View>
@@ -79,17 +79,22 @@ const styles = StyleSheet.create({
     backgroundColor: 'brown',
     flexDirection: 'row',
   },
+  half2x:{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+
+  },
+
   half21: {
-    flex: 1,
+
     backgroundColor: 'green',
-    justifyContent: 'center',
-    alignItems: 'center'
+
   },
   half22: {
-    flex: 1,
+
     backgroundColor: 'purple',
-    justifyContent: 'center',
-    alignItems: 'center'
+
   },
   text:{
     color: 'white',
